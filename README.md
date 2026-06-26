@@ -1,8 +1,14 @@
 # fast-bytelevel-bpe-go
 
-Fast HuggingFace-compatible ByteLevel BPE tokenizer trainer written in Go.
+Train HuggingFace-compatible ByteLevel BPE tokenizers about 6x faster than HuggingFace's Python training path for the supported JSONL setup.
 
-This project trains a `tokenizer.json` compatible with HuggingFace `tokenizers` for a narrow, performance-focused setup:
+`fast-bytelevel-bpe-go` is a focused Go trainer that produces a HuggingFace-compatible `tokenizer.json` while aggressively optimizing the common large-JSONL ByteLevel BPE path.
+
+In one local benchmark, it trained the same 32,779-token tokenizer in 739.59s vs 4406.97s for HuggingFace `tokenizers` through Python `train_from_iterator`, with identical vocab and merges.
+
+See [docs/benchmarks.md](docs/benchmarks.md) for benchmark details and caveats.
+
+This project intentionally targets a narrow, performance-focused setup:
 
 - JSONL input
 - one string field, default `text`
