@@ -1,0 +1,9 @@
+.DS_Store
+bin/
+dist/
+*.log
+*.json
+!examples/*.json
+__pycache__/
+.venv/
+.pytest_cache/

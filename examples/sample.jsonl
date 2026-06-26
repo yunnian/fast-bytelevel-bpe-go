@@ -1,0 +1,3 @@
+{"text":"hello world\nhello byte level bpe"}
+{"text":"你好，世界。ByteLevel BPE keeps UTF-8 bytes reversible."}
+{"text":"  leading spaces, tabs\tand\nnewlines are handled like GPT-2 ByteLevel."}
